@@ -1,8 +1,8 @@
 import { createRouter } from "./trpc"
-import uploadRouter from "./modules/upload/router"
+import frqRouter from "./modules/frq/router"
 
 export const appRouter = createRouter({
-	upload: uploadRouter,
+	frq: frqRouter,
 })
 
 export type AppRouter = typeof appRouter

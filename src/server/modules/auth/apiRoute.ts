@@ -43,7 +43,10 @@ const authHandler: NextApiHandler = async (req, res) => {
 
 		const {
 			data: { emailAddresses, photos },
-		} = await people.people.get({ resourceName: "people/me" })
+		} = await people.people.get({
+			resourceName: "people/me",
+			personFields: "emailAddresses,photos",
+		})
 
 		const email = emailAddresses?.[0]?.value
 
